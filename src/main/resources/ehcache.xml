@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+CacheManager Configuration
+==========================
+
+Check http://www.ehcache.org/ehcache.xml for documentation about this file configuration.
+
+-->
+<ehcache 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:noNamespaceSchemaLocation="ehcache.xsd"
+		updateCheck="false">
+     
+	<!-- TTL=5min, TTI=5min -->
+	<defaultCache
+			maxEntriesLocalHeap="200"
+			eternal="false"
+			timeToIdleSeconds="300"
+			timeToLiveSeconds="300" 
+			memoryStoreEvictionPolicy="LRU"
+			copyOnRead="true"
+			copyOnWrite="true">
+		
+		<persistence strategy="none" />
+	</defaultCache>
+     
+</ehcache>
